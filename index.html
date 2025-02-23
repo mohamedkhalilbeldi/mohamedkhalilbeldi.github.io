@@ -3,55 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Khalil BELDI - Digital Identity</title>
+    <title>Digital Identity Hub</title>
     <style>
+        :root {
+            --primary-color: #2d3748;
+            --accent-color: #4299e1;
+            --bg-color: #ffffff;
+            --text-color: #1a202c;
+            --card-bg: #f7fafc;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: system-ui, -apple-system, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
         }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         nav {
-            margin-bottom: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
         }
+
         nav a {
-            margin-right: 20px;
+            color: white;
             text-decoration: none;
-            color: #333;
+            margin-right: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
         }
+
         nav a:hover {
-            color: #007bff;
+            color: var(--accent-color);
         }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(to right, #2d3748, #4a5568);
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
         .did-section {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
+            background: #edf2f7;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
         }
+
         .did-link {
-            word-break: break-all;
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
             font-family: monospace;
+            word-break: break-all;
+            display: inline-block;
+            margin: 0.5rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/.well-known/did.json">DID Document</a>
-    </nav>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/.well-known/did.json">DID Document</a>
+        </nav>
+    </header>
 
     <main>
-        <h1>Your Name</h1>
-        <p>Welcome to my digital identity page.</p>
+        <section class="hero">
+            <h1>Decentralized Identity Hub</h1>
+            <p>Empowering digital trust through decentralized identity verification</p>
+        </section>
 
         <div class="did-section">
-            <h2>Decentralized Identity (DID)</h2>
-            <p>My DID: <span class="did-link">did:web:mohamedkhalilbeldi</span></p>
-            <p>You can find my DID document at: 
-                <a href="/.well-known/did.json" class="did-link">/.well-known/did.json</a>
-            </p>
+            <h2>DID Information</h2>
+            <p>My Decentralized Identifier (DID):</p>
+            <div class="did-link">did:web:yourdomain.github.io</div>
+            <p>DID Document Location:</p>
+            <a href="/.well-known/did.json" class="did-link">/.well-known/did.json</a>
         </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Verification</h3>
+                <p>Cryptographically secure identity verification using W3C DID standards.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Integration</h3>
+                <p>Easy integration with Web3 applications and decentralized systems.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Control</h3>
+                <p>Full control over your digital identity and personal data.</p>
+            </div>
+        </div>
+
+        <section id="about" class="card">
+            <h2>About</h2>
+            <p>I am a digital identity enthusiast focused on building a more secure and privacy-respecting internet. Through decentralized identity solutions, I aim to contribute to the future of digital trust and verification.</p>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2025 Mohamed Khalil BELDI. Powered by GitHub Pages.</p>
+    </footer>
 </body>
 </html>
