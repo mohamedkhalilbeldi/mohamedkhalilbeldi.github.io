@@ -1,13 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>did:web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Khalil BELDI - Digital Identity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            margin-bottom: 30px;
+        }
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+        .did-section {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .did-link {
+            word-break: break-all;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="/.well-known/">did:web</a></li>
-        </ul>
+        <a href="/">Home</a>
+        <a href="/.well-known/did.json">DID Document</a>
     </nav>
+
+    <main>
+        <h1>Your Name</h1>
+        <p>Welcome to my digital identity page.</p>
+
+        <div class="did-section">
+            <h2>Decentralized Identity (DID)</h2>
+            <p>My DID: <span class="did-link">did:web:mohamedkhalilbeldi</span></p>
+            <p>You can find my DID document at: 
+                <a href="/.well-known/did.json" class="did-link">/.well-known/did.json</a>
+            </p>
+        </div>
+    </main>
 </body>
 </html>
